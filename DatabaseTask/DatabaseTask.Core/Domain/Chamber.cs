@@ -10,8 +10,11 @@ namespace DatabaseTask.Core.Domain
     public class Chamber
     {
         [Key]
+        public int ChamberID { get; set; }
+
         public int BlockID { get; set; }
-        public Prison PrisonID { get; set; }
+        public Block Block { get; set; }
+
         public int number { get; set; }
         public int floor { get; set; }
         public int MaximumCapacity { get; set; }

@@ -7,7 +7,8 @@ namespace DatabaseTask.Core.Domain
         [Key]
         public int GuardsID { get; set; }
 
-        public Prison PrisonID { get; set; }
+        public int PrisonID { get; set; }
+        public Prison Prison { get; set; }
 
         [MaxLength(50)]
         public string FirstName { get; set; }

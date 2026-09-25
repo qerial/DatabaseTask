@@ -11,17 +11,25 @@ namespace DatabaseTask.Core.Domain
     {
         [Key]
         public int PrisonerID { get; set; }
-        public Chamber ChamberID { get; set; }
-        public Punishment PunishmentID { get; set; }
+
+        public int ChamberID { get; set; }
+        public Chamber Chamber { get; set; }
+
+        public int PunishmentID { get; set; }
+        public Punishment Punishment { get; set; }
+
         [MaxLength(50)]
         public string FirstName { get; set; }
+
         [MaxLength(50)]
         public string LastName { get; set; }
+
         public DateTime DOB { get; set; }
         public int PersonalNumber { get; set; }
         public DateTime ArrivalDate { get; set; }
         public bool PrisonerStatus { get; set; }
-        public Crime CrimeID { get; set; }
 
+        public int CrimeID { get; set; }
+        public Crime Crime { get; set; }
     }
 }

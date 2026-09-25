@@ -5,10 +5,9 @@ using Microsoft.Extensions.Configuration;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddControllersWithViews();
-
-builder.Services.AddDbContext<DatabaseTaskDbContext>(options => 
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+builder.Services.AddDbContext<DatabaseTaskDbContext>(options =>
+    options.UseSqlServer(
+        builder.Configuration.GetConnectionString("DefaultConnection")));
 //void ConfigureServices(IServiceCollection services)
 //{
 //    services.AddDbContext<DatabaseTaskDbContext>(options =>

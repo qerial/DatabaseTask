@@ -11,7 +11,8 @@ namespace DatabaseTask.Core.Domain
     {
         [Key]
         public int BuildingsID { get; set; }
-        public Prison PrisonID { get; set; }
 
+        public int PrisonID { get; set; }
+        public Prison Prison { get; set; }
     }
 }

@@ -11,11 +11,15 @@ namespace DatabaseTask.Core.Domain
     {
         [Key]
         public int BlockID { get; set; }
-        public Prison PrisonID { get; set; }
+
+        public int PrisonID { get; set; }
+        public Prison Prison { get; set; }
+
         public int number { get; set; }
+
         [MaxLength(60)]
         public string Name { get; set; }
-        public int SecurityLevel { get; set; }
 
+        public int SecurityLevel { get; set; }
     }
 }

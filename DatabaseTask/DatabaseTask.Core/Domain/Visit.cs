@@ -11,13 +11,18 @@ namespace DatabaseTask.Core.Domain
     {
         [Key]
         public int VisitID { get; set; }
-        public Visitors VisitorsID { get; set; }
-        public Prisoners PrisonerID { get; set; }
+
+        public int VisitorsID { get; set; }
+        public Visitors Visitors { get; set; }
+
+        public int PrisonerID { get; set; }
+        public Prisoners Prisoner { get; set; }
+
         public DateTime Date { get; set; }
         public int StartTime { get; set; }
         public int EndTime { get; set; }
+
         [MaxLength(60)]
         public string VisitingStatus { get; set; }
-
     }
 }
